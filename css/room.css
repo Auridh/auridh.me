@@ -1,5 +1,5 @@
 :root {
-    --lighttimer: 1s;
+    --lighttimer: 12s;
 }
 
 .room {
@@ -37,6 +37,7 @@
 
 
 .lamp {
+    /* ( < > ) https://codepen.io/Hornebom/pen/clDsr */
     position: absolute;
     right: 30%;
     width: 1.4rem;
@@ -63,7 +64,7 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.17);
     box-shadow: inset 4px -4px 20px rgba(255, 255, 255, 0.16);
-    animation: lamp_on .15s 1s forwards;
+    animation: lamp_on .15s var(--lighttimer) forwards;
 }
 
 .light,
@@ -103,5 +104,22 @@
 @keyframes fade {
     to {
         opacity: 0;
+    }
+}
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
