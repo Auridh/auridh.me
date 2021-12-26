@@ -4,7 +4,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 278 300"
-     id="fillFade">
+     id="flash_logo">
   <path id="flash_logo__path"
         stroke="white" stroke-width="1"
         d="M 135.00,0.00
