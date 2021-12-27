@@ -81,5 +81,63 @@
 }
 
 .time-app {
-
+    width: 110px;
+    height: 110px;
+    background-color: #4d4d4d;
+    border: 10px solid #5b5b5b;
+    position: relative;
+    border-radius: 50%;
+    left: 45px;
+    top: -10px;
+}
+.knot {
+    width: 10px;
+    height: 10px;
+    background-color: #e1305a;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.hand {
+    width: 4px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom;
+}
+.hand--hour {
+    height: 30px;
+    transform: translate(-50%,-100%) rotate(45deg);
+    animation: 72s hour-hand-animation linear infinite;
+}
+.hand--minute {
+    height: 40px;
+    width: 3px;
+    transform: translate(-50%,-100%) rotate(160deg);
+    animation: 12s min-hand-animation linear infinite;
+}
+.hand--second {
+    height: 47px;
+    width: 2px;
+    transform: translate(-50%,-100%) rotate(-40deg);
+    animation: 2s second-hand-animation linear infinite;
+}
+@keyframes min-hand-animation{
+    100%{
+        transform: translate(-50%,-100%) rotate(520deg);
+    }
+}
+@keyframes second-hand-animation{
+    100%{
+        transform: translate(-50%,-100%) rotate(320deg);
+    }
+}
+@keyframes hour-hand-animation{
+    100%{
+        transform: translate(-50%,-100%) rotate(405deg);
+    }
 }
