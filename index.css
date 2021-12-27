@@ -1,9 +1,20 @@
 :root {
     --lighttimer: 12s;
+    --red-color: rgba(244,67,54,1);
+    --blue-color: rgba(33,150,243,1);
 }
 
 body {
     background-color: white;
     margin: 0;
     overflow: hidden;
+}
+
+.visually-hidden {
+    display: none;
+}
+.full-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

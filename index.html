@@ -11,24 +11,31 @@
     <link rel="stylesheet" href="css/room/room.css">
 </head>
 <body>
-    <div>
-        <div class="opening">
-            <div class="flash_logo__hider"></div>
-            <svg
-                    class="flash_logo"
-            >
-                <use href="assets/img/logo.svg#flash_logo"></use>
-            </svg>
+    <input id="wake_up__trigger--input" type="checkbox"  class="visually-hidden" autocomplete="off">
+    <label id="wake_up__trigger--label" class="full-screen" for="wake_up__trigger--input"></label>
+    <div class="opening full-screen">
+        <div class="wake_up__trigger full-screen">
         </div>
+        <div class="flash_logo__hider"></div>
+        <svg
+                class="flash_logo"
+        >
+            <use href="assets/img/logo.svg#flash_logo"></use>
+        </svg>
+        <svg
+                class="wake_up"
+        >
+            <use href="assets/img/wakeup.svg#wake_up"></use>
+        </svg>
+    </div>
+    <div class="eye">
+        <div class="full-screen eye--open"></div>
+        <div class="full-screen eye--closed"></div>
     </div>
     <div>
-        <div class="eye eye--open"></div>
-        <div class="eye eye--closed"></div>
-    </div>
-    <div>
-        <div class="room">
-            <div class="lightroom"></div>
-            <div class="wall"></div>
+        <div class="room full-screen">
+            <div class="lightroom full-screen"></div>
+            <div class="wall full-screen"></div>
             <div class="base"></div>
             <div class="lamp">
                 <div class="light"></div>

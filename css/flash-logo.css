@@ -9,6 +9,9 @@
     max-height: 50%;
 
     z-index: 1001;
+
+    fill: transparent;
+    filter: drop-shadow(5px 4px var(--red-color)) drop-shadow(-5px -6px var(--blue-color));
 }
 
 #flash_logo__path {
@@ -55,7 +58,7 @@
 }
 @keyframes flash_logo {
     to {
-        bottom: -325%;
-        left: -325%;
+        bottom: -320%;
+        left: -320%;
     }
 }

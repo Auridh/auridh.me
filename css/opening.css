@@ -1,8 +1,66 @@
 .opening {
-    position: absolute;
-    height: 100%;
-    width: 100%;
     background-color: black;
-
     z-index: 1000;
+}
+
+.wake_up {
+    position: absolute;
+    bottom: 25%;
+    right: 32%;
+
+    width: 40%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 50%;
+
+    z-index: 1005;
+}
+#wake_up__trigger--label:hover ~ .opening .wake_up {
+    animation: icon3d .5s infinite;
+}
+#wake_up__path {
+    /* https://codepen.io/MisterGeckley/pen/exroQj UwU */
+    stroke-dasharray: 1228.786865234375;
+    stroke-dashoffset: 1228.786865234375;
+    stroke-width: .5;
+
+    animation: wake-anim 4s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes wake-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes icon3d {
+     0% {
+         filter: drop-shadow(5px 4px var(--red-color)) drop-shadow(-5px -6px var(--blue-color));
+     }
+     25% {
+         filter: drop-shadow(-5px -6px var(--red-color)) drop-shadow(5px 4px var(--blue-color));
+     }
+     50% {
+         filter: drop-shadow(5px -4px var(--red-color)) drop-shadow(-8px 4px var(--blue-color));
+     }
+     75% {
+         filter: drop-shadow(-8px -4px var(--red-color)) drop-shadow(-5px -4px var(--blue-color));
+     }
+     100% {
+         filter: drop-shadow(-5px 0 var(--red-color)) drop-shadow(5px -4px var(--blue-color));
+     }
+}
+
+.wake_up__trigger {
+}
+#wake_up__trigger--label {
+    z-index: 1006;
+}
+#wake_up__trigger--input:checked ~ #wake_up__trigger--label {
+    display: none;
+}
+#wake_up__trigger--input:checked ~ .opening {
+    display: none;
+    overflow: hidden;
 }

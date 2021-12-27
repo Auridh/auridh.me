@@ -1,15 +1,8 @@
 @import "lamp.css";
 
 .room {
-    position: absolute;
-    height: 100%;
-    width: 100%;
 }
 .lightroom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
     background-color: black;
     opacity: .9;
     z-index: -2;
@@ -17,18 +10,15 @@
 }
 
 .wall {
-    height: 100%;
-    width: 100%;
     background: #ffc37f;
-    position: absolute;
     z-index: -5;
 }
 
 .base {
+    position: absolute;
     height: 15px;
     width: 100%;
     background: #5a3f21;
-    position: absolute;
     bottom: 0;
     z-index: -4;
 }
