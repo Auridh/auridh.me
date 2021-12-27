@@ -1,0 +1,44 @@
+@import "lamp.css";
+
+:root {
+    --lighttimer: 12s;
+}
+
+.room {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.lightroom {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
+    opacity: .9;
+    z-index: -2;
+    animation: fade .15s var(--lighttimer) forwards;
+}
+
+.wall {
+    height: 100%;
+    width: 100%;
+    background: #ffc37f;
+    position: absolute;
+    z-index: -5;
+}
+
+.base {
+    height: 15px;
+    width: 100%;
+    background: #5a3f21;
+    position: absolute;
+    bottom: 0;
+    z-index: -4;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
