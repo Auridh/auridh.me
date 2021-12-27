@@ -29,6 +29,13 @@
 
 
 #light__trigger--label {
-    z-index: 1100;
+    position: absolute;
+    right: calc(30% - 3.3rem);
+    top: 20rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+
+    z-index: 90;
     cursor: pointer;
 }

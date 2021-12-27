@@ -6,7 +6,11 @@
     background-color: black;
     opacity: .9;
     z-index: -2;
-    /*animation: fade .15s forwards;*/
+
+    transition: opacity .15s;
+}
+#light__trigger--input:checked ~ .lightroom {
+    opacity: 0;
 }
 
 .wall {
@@ -21,10 +25,4 @@
     background: #5a3f21;
     bottom: 0;
     z-index: -4;
-}
-
-@keyframes fade {
-    to {
-        opacity: 0;
-    }
 }

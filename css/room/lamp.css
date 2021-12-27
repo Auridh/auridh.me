@@ -11,9 +11,6 @@
     background-repeat: no-repeat;
     background-size: .3rem 16rem, .8rem 1.6rem, 1.4rem 4rem;
     background-position: 50% 0, .3rem 16rem, 0 17.6rem;
-
-    /*transform-origin: top center;*/
-    /*animation: swing 3s linear;*/
 }
 
 .lamp:before, .lamp:after {
@@ -29,7 +26,20 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.17);
     box-shadow: inset 4px -4px 20px rgba(255, 255, 255, 0.16);
-    /*animation: lamp_on .15s forwards;*/
+
+    transition: background-color .15s, box-shadow .15s;
+}
+#light__trigger--input:checked ~ .lamp:before {
+    background: rgba(255,255,255,1);
+    box-shadow:
+            0 2px 10px rgba(255,255,255,0.8),
+            0 5px 50px rgba(255,255,255,0.8),
+            0 8px 80px rgba(255,255,255,0.6),
+            0 8px 120px rgba(255,255,255,0.6);
+}
+#light__trigger--input:checked ~ .lamp {
+    transform-origin: top center;
+    animation: swing 3s linear;
 }
 
 .light,
@@ -56,28 +66,18 @@
     box-shadow: 0 0 50px rgba(255, 255, 255, 0);
 }
 
-@keyframes lamp_on {
-    to {
-        background: rgba(255,255,255,1);
-        box-shadow:
-                0 2px 10px rgba(255,255,255,0.8),
-                0 5px 50px rgba(255,255,255,0.8),
-                0 8px 80px rgba(255,255,255,0.6),
-                0 8px 120px rgba(255,255,255,0.6);
-    }
-}
 @keyframes swing {
     20% {
-        transform: rotate(15deg);
+        transform: rotate(2deg);
     }
     40% {
-        transform: rotate(-10deg);
+        transform: rotate(-2deg);
     }
     60% {
-        transform: rotate(5deg);
+        transform: rotate(1deg);
     }
     80% {
-        transform: rotate(-5deg);
+        transform: rotate(-1deg);
     }
     100% {
         transform: rotate(0deg);

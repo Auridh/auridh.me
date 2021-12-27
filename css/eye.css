@@ -5,15 +5,20 @@
     background-size: 200% 100%;
     z-index: 100;
 
-    animation: eye_fade 4s forwards;
-    animation-delay: 3s;
+    animation: eye_fade 4s 3s forwards, remove_height 0.01s 7s forwards;
 }
 .eye--closed {
     background: radial-gradient(transparent 0%, black 0%) 50% 0;
     background-size: 200% 100%;
     z-index: 99;
 
-    animation: eye_blink 7s forwards;
+    animation: eye_blink 7s forwards, remove_height 0.01s 7s forwards;
+}
+
+@keyframes remove_height {
+    to {
+        height: 0;
+    }
 }
 
 @keyframes eye_fade {
