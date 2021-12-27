@@ -1,4 +1,9 @@
+:root {
+    --lighttimer: 12s;
+}
+
 body {
     background-color: white;
     margin: 0;
+    overflow: hidden;
 }

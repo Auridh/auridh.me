@@ -1,23 +1,21 @@
 .flash_logo {
     position: absolute;
-    bottom: 15px;
-    right: 10px;
+    bottom: 25%;
+    right: 25%;
 
-    width: 150px;
-    height: 150px;
-    max-width: 33%;
-    max-height: 33%;
+    width: 50%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 50%;
 
-    z-index: 200;
-
-    animation: fade 1s ease forwards 3s;
+    z-index: 1001;
 }
 
 #flash_logo__path {
     /* https://codepen.io/MisterGeckley/pen/exroQj UwU */
     stroke-dasharray: 1228.786865234375;
     stroke-dashoffset: 1228.786865234375;
-    animation: line-anim 3s forwards;
+    animation: line-anim 6s forwards;
 }
 
 @keyframes fade {
@@ -35,5 +33,29 @@
     }
     100% {
         stroke-dashoffset: 1228.786865234375;
+    }
+}
+
+
+.flash_logo__hider {
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+
+    width: 400%;
+    height: 400%;
+
+    z-index: 1002;
+
+    background:
+            linear-gradient(30deg, black 10%, transparent 70%),
+            linear-gradient(30deg, transparent 30%, black 90%);
+
+    animation: flash_logo 3s linear forwards;
+}
+@keyframes flash_logo {
+    to {
+        bottom: -325%;
+        left: -325%;
     }
 }

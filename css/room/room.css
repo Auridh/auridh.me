@@ -1,9 +1,5 @@
 @import "lamp.css";
 
-:root {
-    --lighttimer: 12s;
-}
-
 .room {
     position: absolute;
     height: 100%;

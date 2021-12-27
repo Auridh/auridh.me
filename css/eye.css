@@ -8,16 +8,16 @@
     background-size: 200% 100%;
     z-index: 100;
 
-    animation: eye_fade 4s forwards;
-    animation-delay: 7s;
+    /*animation: eye_fade 4s forwards;*/
+    /*animation-delay: 7s;*/
 }
 .eye--closed {
     background: radial-gradient(transparent 0%, black 0%) 50% 0;
     background-size: 200% 100%;
     z-index: 99;
 
-    animation: eye_blink 7s forwards;
-    animation-delay: 4s;
+    /*animation: eye_blink 7s forwards;*/
+    /*animation-delay: 4s;*/
 }
 
 @keyframes eye_fade {
