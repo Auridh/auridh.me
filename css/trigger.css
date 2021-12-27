@@ -5,12 +5,30 @@
 .wake_up__trigger {
 }
 #wake_up__trigger--label {
-    z-index: 1006;
+    z-index: 1100;
     cursor: pointer;
+    height: 0;
+
+    animation: display_delayed 0.01s 2s forwards;
 }
+@keyframes display_delayed {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
 #wake_up__trigger--input:checked ~ #wake_up__trigger--label {
     display: none;
 }
 #wake_up__trigger--input:checked ~ .tr--wakeup {
-    display: unset;
+    display: unset !important;
+}
+
+
+#light__trigger--label {
+    z-index: 1100;
+    cursor: pointer;
 }
