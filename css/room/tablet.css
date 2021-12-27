@@ -8,13 +8,18 @@
 
     border: 20px solid #111;
     border-radius: 10px;
-    background: white;
-    box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 1px #000 inset;
+    background: #414141;
+    box-shadow: 0 0 0 1px #000 inset;
 
     z-index: 0;
 
     transform: rotate(15deg);
     transform-origin: top center;
+
+    transition: box-shadow .15s;
+}
+#light__trigger--input:checked ~ .wall > .tablet {
+    box-shadow: 0 0 0 1px #000 inset, -26px 8px 2px 10px rgba(0,0,0,0.7);
 }
 
 .glass_crack {
@@ -28,6 +33,10 @@
 #glass_crack__path {
     stroke-width: 2;
     fill: rgba(0, 0, 0, 0.33);
+}
+
+.nail {
+
 }
 
 .time-app {
