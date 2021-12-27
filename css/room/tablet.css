@@ -1,0 +1,35 @@
+.tablet {
+    position: absolute;
+    left: 33%;
+    top: 20%;
+
+    height: 320px;
+    width: 220px;
+
+    border: 20px solid #111;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 1px #000 inset;
+
+    z-index: 0;
+
+    transform: rotate(15deg);
+    transform-origin: top center;
+}
+
+.glass_crack {
+    position: relative;
+    top: -20px;
+    left: -20px;
+
+    width: 100px;
+    height: 100px;
+}
+#glass_crack__path {
+    stroke-width: 2;
+    fill: rgba(0, 0, 0, 0.33);
+}
+
+.time-app {
+
+}
