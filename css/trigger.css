@@ -1,0 +1,15 @@
+.tr--wakeup {
+    display: none;
+}
+
+.wake_up__trigger {
+}
+#wake_up__trigger--label {
+    z-index: 1006;
+}
+#wake_up__trigger--input:checked ~ #wake_up__trigger--label {
+    display: none;
+}
+#wake_up__trigger--input:checked ~ .tr--wakeup {
+    display: unset;
+}
