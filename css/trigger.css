@@ -6,6 +6,7 @@
 }
 #wake_up__trigger--label {
     z-index: 1006;
+    cursor: pointer;
 }
 #wake_up__trigger--input:checked ~ #wake_up__trigger--label {
     display: none;
