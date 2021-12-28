@@ -32,7 +32,6 @@
     height: 30px;
     top: 25px;
     left: 25px;
-    z-index: 20;
 }
 .book__icon--personal {
     fill: rgb(157, 55, 79);
@@ -41,7 +40,7 @@
     fill: rgb(29, 155, 240);
 }
 .book__icon--instagram {
-    fill: rgb(206, 206, 206);
+    fill: rgb(255, 143, 201);
 }
 .book__icon--github {
     fill: rgb(54, 54, 56);
@@ -62,7 +61,7 @@
 .book--instagram {
     right: calc(50% - (3 * 80px));
     height: 360px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(255, 143, 201);
 }
 
 .book--github {
@@ -79,4 +78,14 @@
     background-color: #e9e6c9;
     top: 20px;
     left: 0;
+}
+.book::after {
+    content: " ";
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
