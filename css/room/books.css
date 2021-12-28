@@ -6,10 +6,16 @@
     width: 80px;
     box-shadow: 0 0 1px 2px rgba(0,0,0,0.2);
 
-    z-index: 20;
+    z-index: -3;
+
+    transition: bottom .25s, z-index .15s;
 }
-#light__trigger--input:checked ~ .base > .book {
+.book:hover {
+    bottom: 50px;
+}
+#light__trigger--input:checked ~ .book {
     box-shadow: 0 60px 22px 10px rgba(0,0,0,0.7);
+    z-index: 20;
 }
 .book__icon {
     position: relative;
@@ -74,4 +80,18 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.book_trigger__label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    z-index: -3;
+    transition: z-index .15s;
+}
+#light__trigger--input:checked ~ .book > .book_trigger__label {
+    z-index: 21;
 }
