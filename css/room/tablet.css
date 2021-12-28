@@ -17,6 +17,8 @@
     transform-origin: top center;
 
     transition: box-shadow .15s;
+
+    animation: flicker 15s infinite alternate;
 }
 #light__trigger--input:checked ~ .wall > .tablet {
     box-shadow: 0 0 0 1px #000 inset, -26px 8px 2px 10px rgba(0,0,0,0.7);
@@ -139,5 +141,13 @@
 @keyframes hour-hand-animation{
     100%{
         transform: translate(-50%,-100%) rotate(405deg);
+    }
+}
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        filter: brightness(1);
+    }
+    20%, 24%, 55% {
+        filter: brightness(0.9);
     }
 }
