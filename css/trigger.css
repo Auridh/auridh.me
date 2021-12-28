@@ -39,3 +39,51 @@
     z-index: 90;
     cursor: pointer;
 }
+
+
+.book_trigger__label {
+    position: absolute;
+    bottom: 15px;
+
+    width: 80px;
+
+    cursor: pointer;
+    transition: z-index .15s, bottom .25s;
+}
+#book--personal__trigger--label {
+    right: calc(50% - (1 * 80px));
+    height: 340px;
+}
+#book--twitter__trigger--label {
+    right: calc(50% - (2 * 80px));
+    height: 390px;
+}
+#book--instagram__trigger--label {
+    right: calc(50% - (3 * 80px));
+    height: 360px;
+}
+#book--github__trigger--label {
+    right: calc(50% - (4 * 80px));
+    height: 325px;
+}
+#book--personal__trigger--label:hover,
+#book--twitter__trigger--label:hover,
+#book--instagram__trigger--label:hover,
+#book--github__trigger--label:hover {
+    bottom: 50px;
+}
+#book--personal__trigger--input:checked ~ #book--personal__trigger--label,
+#book--twitter__trigger--input:checked ~ #book--twitter__trigger--label,
+#book--instagram__trigger--input:checked ~ #book--instagram__trigger--label,
+#book--github__trigger--input:checked ~ #book--github__trigger--label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: unset;
+    right: unset;
+    z-index: 9999;
+}
+
+#light__trigger--input:checked ~ .book_trigger__label {
+    z-index: 21;
+}
