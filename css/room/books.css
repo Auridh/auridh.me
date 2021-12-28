@@ -8,13 +8,13 @@
 
     z-index: -3;
 
-    transition: bottom .25s, z-index .15s;
+    transition: bottom .25s;
 }
 .book:hover {
     bottom: 50px;
 }
 #light__trigger--input:checked ~ .book {
-    box-shadow: 0 60px 22px 10px rgba(0,0,0,0.7);
+    box-shadow: -15px 20px 22px 10px rgba(0,0,0,0.7);
     z-index: 20;
 }
 .book__icon {
@@ -23,18 +23,19 @@
     height: 30px;
     top: 25px;
     left: 25px;
+    z-index: 20;
 }
 .book__icon--personal {
-    fill: #9d374f;
+    fill: rgb(157, 55, 79);
 }
 .book__icon--twitter {
     fill: rgb(29, 155, 240);
 }
 .book__icon--instagram {
-    fill: beige;
+    fill: rgb(206, 206, 206);
 }
 .book__icon--github {
-    fill: #363638;
+    fill: rgb(54, 54, 56);
 }
 
 .book--personal {
@@ -52,7 +53,7 @@
 .book--instagram {
     right: calc(50% - (3 * 80px));
     height: 360px;
-    background-color: beige;
+    background-color: rgb(206, 206, 206);
 }
 
 .book--github {
@@ -71,17 +72,6 @@
     left: 0;
 }
 
-.book::after {
-    content: " ";
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.15;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 .book_trigger__label {
     position: relative;
     display: inline-block;
@@ -89,7 +79,6 @@
     height: 100%;
     cursor: pointer;
 
-    z-index: -3;
     transition: z-index .15s;
 }
 #light__trigger--input:checked ~ .book > .book_trigger__label {
