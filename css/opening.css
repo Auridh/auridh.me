@@ -1,6 +1,7 @@
 .opening {
     background-color: black;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .wake_up {
