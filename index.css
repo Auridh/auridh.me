@@ -17,3 +17,8 @@ body {
     width: 100%;
     height: 100%;
 }
+
+label {
+    /*Disable label highlighting on click in chrome*/
+    -webkit-tap-highlight-color: transparent;
+}
