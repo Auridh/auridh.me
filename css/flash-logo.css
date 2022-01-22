@@ -12,14 +12,14 @@
 
     fill: transparent;
     filter: drop-shadow(5px 4px var(--red-color)) drop-shadow(-5px -6px var(--blue-color));
-}
 
-#flash_logo__path {
     /* https://codepen.io/MisterGeckley/pen/exroQj UwU */
     stroke-dasharray: 1228.786865234375;
     stroke-dashoffset: 1228.786865234375;
     animation: line-anim 6s forwards;
 }
+
+#flash_logo__path {}
 
 @keyframes fade {
     from {

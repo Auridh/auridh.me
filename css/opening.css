@@ -15,8 +15,7 @@
     max-height: 50%;
 
     z-index: 1005;
-}
-#wake_up__path {
+
     /* https://codepen.io/MisterGeckley/pen/exroQj UwU */
     stroke-dasharray: 1228.786865234375;
     stroke-dashoffset: 1228.786865234375;
@@ -25,6 +24,7 @@
     animation: wake-anim 4s forwards;
     animation-delay: 2s;
 }
+#wake_up__path {}
 
 @keyframes wake-anim {
     to {
@@ -50,7 +50,7 @@
      }
 }
 
-#wake_up__trigger--label:hover ~ .opening .wake_up {
+#wake_up__trigger--label:hover ~ .opening .wake_up > use {
     animation: icon3d .5s infinite;
 }
 #wake_up__trigger--input:checked ~ .opening {
