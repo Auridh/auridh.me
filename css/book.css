@@ -41,7 +41,7 @@
     background-color: rgb(29, 155, 240);
 }
 #book--instagram__trigger--input:checked ~ .open_book > .cover {
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(255, 143, 201);
 }
 #book--github__trigger--input:checked ~ .open_book > .cover {
     background-color: #363638;
